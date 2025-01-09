@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form{
+            background-color: black;
+            display: inline-block;
+            padding:12px;
+            border-radius: 20px;
+
+        }
+        .btn{
+          margin:10px;
+          padding:3px;
+          width:40px;
+          font-size:20px;
+          font-weight:bold;
+          cursor:pointer;
+          background-color: grey;
+
+        }
+        .btnc{
+            background-color: red;
+            color:aliceblue
+        }
+         .btne{
+            background-color: lightblue;
+           
+        }
+        .screen{
+            width:235px;
+            padding:6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form">
+        <form name="form">
+            <input class="screen" name="screen" id="screen" readonly>
+            
+        </form>
+        <div id="row1">
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value="7">7</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value="8">8</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value="9">9</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value=" * ">x</button>
+            
+        </div>
+        <div id="row2">
+            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="4">4</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="5">5</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="6">6</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="+">+</button>
+        
+        </div>
+        <div id="row3">
+            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="1">1</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="2">2</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="3">3</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="-">-</button>
+        
+        </div>
+        <div id="row4">
+            <button class="btn btnc" id="btn" type="button" onclick="clear()" >c</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="0">0</button>
+            <button class="btn btne" id="btn" type="button" onclick="eva()">=</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="\">\</button>
+        
+        </div>
+        
+        
+        
+    </div>
+    <script>
+        function fetch(e){
+            form.screen.value +=e
+        }
+    </script>
+</body>
+</html>
