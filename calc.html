@@ -50,24 +50,24 @@
             
         </div>
         <div id="row2">
-            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="4">4</button>
-            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="5">5</button>
-            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="6">6</button>
-            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="+">+</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value="4">4</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value="5">5</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value="6">6</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value=" + ">+</button>
         
         </div>
         <div id="row3">
-            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="1">1</button>
-            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="2">2</button>
-            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="3">3</button>
-            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="-">-</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value="1">1</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value="2">2</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value="3">3</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value=" - ">-</button>
         
         </div>
         <div id="row4">
-            <button class="btn btnc" id="btn" type="button" onclick="clear()" >c</button>
-            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="0">0</button>
+            <button class="btn btnc" id="btn" type="button" onclick="Clear()" value=" " >c</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value="0">0</button>
             <button class="btn btne" id="btn" type="button" onclick="eva()">=</button>
-            <button class="btn" id="btn" type="button" onclick="fetch(this)" value="\">\</button>
+            <button class="btn" id="btn" type="button" onclick="fetch(this.value)" value=" \ ">\</button>
         
         </div>
         
@@ -78,6 +78,17 @@
         function fetch(e){
             form.screen.value +=e
         }
+        
+        function eva(){
+            form.screen.value=(eval(form.screen.value))
+        }
+        function Clear(){ 
+            form.screen.value= null;
+           
+            
+        }
+      
+
     </script>
 </body>
 </html>
